@@ -1,0 +1,34 @@
+Design of the System:
+
+The system is designed to handle queries and documents for information retrieval utilising the Vector Space Model (VSM) and Cosine Similarity. 
+Here's a rundown of the design elements:
+Method of preprocessing:
+
+To remove punctuation, convert to lowercase, and tokenize the text of queries and documents, the text is preprocessed.
+Stop words (common words such as "the", "is", and so on) are usually eliminated to decrease noise in the representation.
+
+Term Weighting and Normalization:
+Term Frequency (TF): A measure of the relevance of a term inside a query or document that is calculated for each term in the query or document.
+Inverse Document Frequency (IDF): A measure of the rarity of a phrase throughout the whole document collection calculated for each term.
+The result of a term's TF and IDF values, integrating local and worldwide relevance measurements.
+
+Data Structures/Classes:
+calculate_tf(terms): Calculates and normalises the term frequency (TF) for a list of terms.
+calculate_idf(documents): This function computes the inverse document frequency (IDF) for a set of documents.
+calculate_tfidf(tf, idf): Returns the TF-IDF weights for a query or document based on the TF and IDF values.
+calculate_cosine_similarity(vector1, vector2): Function to calculate the cosine similarity between two vectors representing queries or documents.
+
+Query Settings:
+The algorithm takes into account the following query settings: primary query (title), description + title, and narrative + title.
+Using the VSM and cosine similarity, the system analyses the query and gets relevant documents for each setting.
+The results are ordered by cosine similarity and saved for future use.
+System Performance Evaluation:
+The following metrics may be utilised for each query under each parameter to evaluate the system's performance:
+
+Precision: Determines the relevancy of the materials obtained. It computes the proportion of relevant documents to total retrieved documents.
+Recall: Determines the extent to which relevant materials are covered. It computes the relevant document ratio in relation to the total number of relevant documents in the collection.
+We may evaluate the usefulness of different query settings in finding relevant information by comparing the accuracy and recall numbers for each query option.
+
+Other performance measurements, such as F1-score, mean average precision (MAP), and normalised discounted cumulative gain (NDCG), can also be utilised.
+
+The performance of the system may be evaluated by changing the weighting and normalisation systems, such as utilising different forms of TF-IDF or alternate weighting methods such as BM25. Experimenting with various setups might offer insights into the best settings for the particular dataset and retrieval job.

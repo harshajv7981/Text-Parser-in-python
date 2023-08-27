@@ -1,0 +1,17 @@
+Sure, here are some of the functions used in implementing the system:
+
+calculate_tf(terms): Calculates the term frequency (TF) for a list of terms and normalizes it.
+
+calculate_idf(documents): Calculates the inverse document frequency (IDF) for a list of documents.
+
+calculate_tfidf(tf, idf): Calculates the TF-IDF weights for a query or document based on the TF and IDF values.
+
+calculate_cosine_similarity(vector1, vector2): Calculates the cosine similarity between two vectors representing queries or documents.
+
+process_queries(queries, relevance, documents): Processes a list of queries and retrieves relevant documents using the VSM and cosine similarity.
+
+evaluate_results(results, relevance): Evaluates the performance of the system by comparing the retrieved results to the relevant documents.
+
+print_results(results): Prints the retrieved documents and their scores in descending order.
+
+These are just some of the functions used in the system, and there may be others depending on the specific implementation.
